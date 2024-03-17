@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuário Logado</title>
+    <style>
+        .login-title {
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+        }
+
+        .user-info {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .user-name,
+        .user-password {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="login-title">Usuário logado.</h2>
+
+    <% for(var i=0; i<usuario.length; i++) { %>
+        <div class="user-info">
+            <p>
+                Usuário: <span class="user-name">
+                    <%= usuario[i].nome_usuario %>
+                </span> <br>
+                Senha: <span class="user-password">
+                    <%= usuario[i].senha %>
+                </span> <br>
+            </p>
+        </div>
+        <% } %>
+</body>
+
+</html>
